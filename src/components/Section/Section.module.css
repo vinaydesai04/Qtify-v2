@@ -27,3 +27,8 @@
   flex-wrap: wrap;
   gap: 16px;
 }
+
+.tabsWrapper {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}

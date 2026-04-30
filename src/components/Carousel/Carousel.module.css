@@ -1,0 +1,42 @@
+.carousel {
+  width: 100%;
+  padding: 16px 0;
+  position: relative;
+}
+/* Keep your existing button size */
+.carousel :global(.swiper-button-prev),
+.carousel :global(.swiper-button-next) {
+  width: 32px;               /* or 36 / 40 if you prefer */
+  height: 32px;
+  border-radius: 999px;
+  background-color: #34c94b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Make the arrow itself smaller */
+.carousel :global(.swiper-button-prev::after),
+.carousel :global(.swiper-button-next::after) {
+  font-size: 10px;   /* smaller arrow; try 10–12px */
+  font-weight: 700;
+}
+
+/* Position left/right */
+.carousel :global(.swiper-button-prev) {
+  left: 0;
+}
+
+.carousel :global(.swiper-button-next) {
+  right: 0;
+}
+
+/* Dim when disabled */
+.carousel :global(.swiper-button-disabled) {
+  opacity: 0.3;
+  cursor: default;
+}

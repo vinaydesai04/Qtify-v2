@@ -1,38 +1,30 @@
 .card {
-  width: 159px;                 /* adjust based on Figma */
-  background-color: #1a1a1a;
-  border-radius: 8px;
-  overflow: hidden;
+  width: 159px;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
 }
 
 .imageWrapper {
+  position: relative;
   width: 100%;
-  height: 170px;                /* adjust to Figma */
+  border-radius: 8px;
   overflow: hidden;
 }
 
 .image {
   width: 100%;
-  height: 100%;
+  height: 170px;
   object-fit: cover;
 }
 
-.content {
-  padding: 8px;
+.chipWrapper {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
 }
 
 .title {
-  color: #ffffff;
+  margin-top: 8px;
   font-size: 14px;
   font-weight: 500;
-  margin: 0 0 4px;
-}
-
-.subtitle {
-  color: #999999;
-  font-size: 12px;
-  margin: 0;
+  color: #ffffff;
 }

@@ -1,27 +1,44 @@
-.search {
-  padding: 14px 20px;
-  height: 100%;
-  border-radius: 8px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border: 1px solid var(--color-black);
-  width: 502px;
-}
-
+ /* Whole search bar: text box + icon box */
 .wrapper {
   display: flex;
   align-items: stretch;
-  height: 48px;
+  height: 48px;          /* from Figma */
+  width: 568px;          /* total width (input + icon) from Figma */
+  box-sizing: border-box;
 }
 
-.searchButton {
-  border-radius: 0px 8px 8px 0px;
+/* Left box: text input */
+.search {
+  flex: 1;
   padding: 14px 20px;
-  height: 100%;
-  border: 1px solid var(--color-black);
-  border-left: none;
+  border-radius: 8px 0 0 8px;      /* rounded only on left side */
+  border: 1px solid #121212;       /* border color from Figma */
+  border-right: none;              /* so you don't see double border between boxes */
+  outline: none;
+  font-size: 16px;
+  font-family: "Lato", "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Right box: icon container */
+.searchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;                     /* width of the right rectangle from Figma */
+  border-radius: 0 8px 8px 0;      /* rounded only on right side */
+  border: 1px solid #121212;
+  border-left: 2px solid #121212;       /* thicker border on the left to create separation */
+  background-color: #ffffff;       /* #FFFFFF from Figma */
   cursor: pointer;
-  height: 100%;
+  box-sizing: border-box;
+}
+
+/* SVG icon inside button */
+.searchButton svg {
+  width: 20px;
+  height: 20px;
+  fill: #121212;                   /* dark color so it’s visible */
 }
 
 .listElement {

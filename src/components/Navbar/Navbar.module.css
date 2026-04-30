@@ -1,9 +1,21 @@
+/* Navbar.module.css */
+
+/* Full-width bar (background) */
 .navbar {
   background-color: var(--color-primary);
   height: 74px;
-  width: 100vw;
-  padding: 0px 32px;
+  width: 100%;            /* full viewport width */
+}
+
+/* 1440px inner content, centered, with border */
+.navbarInner {
+  max-width: 1440px;      /* matches Figma frame width */
+  height: 100%;
+  margin: 0 auto;         /* center */
+  padding: 0 32px;        /* same padding as before */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid var(--color-primary);
+  box-sizing: border-box;
 }

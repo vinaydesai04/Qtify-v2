@@ -1,0 +1,11 @@
+/* App.css */
+.page {
+  max-width: 1440px;  /* same width as your Figma artboard */
+  margin: 0 auto;     /* center it */
+  box-sizing: border-box;
+}
+
+/* Optional: reset body margin so there’s no gap */
+body {
+  margin: 0;
+}

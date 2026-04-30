@@ -1,0 +1,31 @@
+/* Button.module.css */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;                 /* gap: 10px */
+
+  width: 170px;              /* width: 170 */
+  height: 47px;              /* height: 47 */
+
+  padding: 10px 16px;        /* top/bottom: 10, left/right: 16 */
+  border-radius: 12px;       /* border-radius: 12px */
+
+  background: #121212;       /* background: #121212 */
+  border: 1px solid #34C94B; /* border: 1px solid #34C94B */
+
+  cursor: pointer;           /* pointer on hover */
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #34C94B;            /* text same green as border */
+
+  box-sizing: border-box;
+}
+
+.button:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,11 @@
+:root {
+  --color-primary: #34c94b; /* update to Figma green */
+  --color-black: #121212;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-black);
+  color: #ffffff;
+}
