@@ -1,0 +1,38 @@
+.card {
+  width: 159px;                 /* adjust based on Figma */
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 170px;                /* adjust to Figma */
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  padding: 8px;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  color: #999999;
+  font-size: 12px;
+  margin: 0;
+}
