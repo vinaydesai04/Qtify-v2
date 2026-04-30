@@ -40,3 +40,9 @@
   opacity: 0.3;
   cursor: default;
 }
+/* Force the SVG icons inside the buttons to accept clicks for Cypress testing */
+.carousel :global(.swiper-navigation-icon),
+.carousel :global(.swiper-button-next svg),
+.carousel :global(.swiper-button-prev svg) {
+  pointer-events: auto !important;
+}
