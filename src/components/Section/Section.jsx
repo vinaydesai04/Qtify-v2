@@ -14,7 +14,7 @@ function Section({
   showToggle = true,
 }) {
   const [items, setItems] = useState([]);
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false); // default: grid for albums
 
   // Songs-specific state
   const [genres, setGenres] = useState([]);
@@ -45,8 +45,8 @@ function Section({
   }, [isSongsSection]);
 
   const handleToggle = () => {
-    setIsCollapsed((prev) => !prev);
-  };
+  setIsCollapsed((prev) => !prev);
+};
 
   const handleGenreChange = (event, newIndex) => {
     setSelectedGenreIndex(newIndex);
@@ -80,7 +80,7 @@ function Section({
         {/* Show All / Collapse button only for Albums, not for Songs */}
         {!isSongsSection && showToggle && (
           <button className={styles.collapse} onClick={handleToggle}>
-            {isCollapsed ? "Show All" : "Collapse"}
+            {isCollapsed ? "Collapse" : "Show All"}
           </button>
         )}
       </div>
@@ -96,18 +96,20 @@ function Section({
         </div>
       )}
 
-      {/* Content: Songs -> always carousel; Albums -> grid or carousel */}
       {isSongsSection ? (
-        <Carousel items={visibleItems}>
-          {visibleItems.map(renderCard)}
-        </Carousel>
-      ) : isCollapsed ? (
-        <Carousel items={visibleItems}>
-          {visibleItems.map(renderCard)}
-        </Carousel>
-      ) : (
-        <div className={styles.grid}>{visibleItems.map(renderCard)}</div>
-      )}
+  // Songs: always carousel
+  <Carousel items={visibleItems}>
+    {visibleItems.map(renderCard)}
+    </Carousel>
+  ) : isCollapsed ? (
+    // Albums: collapsed state = carousel, button shows "Collapse"
+    <Carousel items={visibleItems}>
+      {visibleItems.map(renderCard)}
+    </Carousel>
+  ) : (
+    // Albums: expanded state = grid, button shows "Show All"
+    <div className={styles.grid}>{visibleItems.map(renderCard)}</div>
+  )}
     </section>
   );
 }
