@@ -12,10 +12,12 @@ function Carousel({ items, children }) {
         modules={[Navigation]}
         navigation
         spaceBetween={16}
+        slidesPerView={4} // fixed 4 so first two can move out after 4 clicks
         breakpoints={{
           320: { slidesPerView: 1.5 },
           640: { slidesPerView: 3 },
-          1024: { slidesPerView: 6 },
+          // do NOT go above 4 on desktop, to ensure movement hides first two albums
+          1024: { slidesPerView: 4 },
         }}
       >
         {items.map((item, index) => (
