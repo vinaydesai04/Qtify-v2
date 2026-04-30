@@ -6,7 +6,7 @@ import Hero from "./components/Hero/Hero";
 import Section from "./components/Section/Section";
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState("");
+  //const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = (query) => {
     setSearchTerm(query);
