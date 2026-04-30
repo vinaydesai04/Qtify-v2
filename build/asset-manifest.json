@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d44e0889.css",
+    "main.js": "/static/js/main.d3c0a93b.js",
+    "static/media/hero_headphones.png": "/static/media/hero_headphones.af28c1d114e4c4d022aa.png",
+    "static/media/search-icon.svg": "/static/media/search-icon.dd412b17d027f487794a6a6efed1d8be.svg",
+    "index.html": "/index.html",
+    "main.d44e0889.css.map": "/static/css/main.d44e0889.css.map",
+    "main.d3c0a93b.js.map": "/static/js/main.d3c0a93b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d44e0889.css",
+    "static/js/main.d3c0a93b.js"
+  ]
+}
